@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="banner-sec">
+    <section id="banner-sec">
         <!-- menu bar -->
         <header>
             <a href="/"><img src="Images/logo.png" alt="logo" class="logo"></a>
@@ -20,6 +20,42 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
+        <div class="content-container">
+            <!-- tex content div -->
+            <div class="text-box">
+                <h2>That's What <br> <span>I Like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sit dolore ullam tempore totam adipisci consectetur dolor, excepturi laborum. Sequi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sit dolore ullam tempore totam adipisci consectetur dolor, excepturi laborum. Sequi!</p>
+                <a href="#">View All Products</a>
+            </div>
+            <!-- image content div -->
+            <div class="image-box">
+                <img src="Images/pepsi001.png" alt="pepsi" id="pepsi">
+            </div>
+        </div>
+            <!-- thumbnail -->
+            <ul class="thumbnail">
+                <li><img src="Images/pepsi001.png" alt="" onclick="imageSliderHandelar('Images/pepsi001.png');backgroundColorHandelar('#0062be')"></li>
+                <li><img src="Images/pepsi002.png" alt="" onclick="imageSliderHandelar('Images/pepsi002.png');backgroundColorHandelar('#e60c2c')"></li>
+                <li><img src="Images/pepsi003.png" alt="" onclick="imageSliderHandelar('Images/pepsi003.png');backgroundColorHandelar('#1e1e1e')"></li>
+            </ul>
+            <!-- social media icon -->
+            <ul class="social-media">
+                <li><a href="#"><img src="Images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="Images/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="Images/twitter.png" alt=""></a></li>
+            </ul>
     </section>
+
+
+    <script>
+        const imageSliderHandelar = (image) => {
+            document.getElementById('pepsi').src= image;
+        };
+
+        const backgroundColorHandelar = (color) => {
+            const bannerSec = document.getElementById('banner-sec');
+            bannerSec.style.background = color;
+        }
+    </script>
 </body>
 </html>
